@@ -10,7 +10,34 @@
   }
 </style>
 <body>
-  <marquee>Welcome to my new site !!!!!</marquee>
+  <marquee direction="left" scrollamount="5">
+  <!-- The word whose letters' colors will change -->
+  <div id="randomWord">Welcome to my new site!!!</div>
+  
+  <script>
+    // Function to generate a random grayscale color
+    function getRandomGray() {
+      var value = Math.floor(Math.random() * 256); // 0–255
+      return 'rgb(' + value + ',' + value + ',' + value + ')';
+    }
+
+    // Function to change the color of letters in a word
+    function changeLetterColors() {
+      var word = document.getElementById('randomWord');
+      var letters = word.textContent.split('');
+      var coloredWord = '';
+      // Change the color of each letter
+      for (var i = 0; i < letters.length; i++) {
+        coloredWord += '<span style="color: ' + getRandomGray() + ';">' + letters[i] + '</span>';
+      }
+      // Update the word with colored letters
+      word.innerHTML = coloredWord;
+    }
+
+    // Change letter colors every 50ms
+    setInterval(changeLetterColors, 50);
+  </script>
+</marquee>
   <p>This is my homepage!</p>
   <ul>
     <li><a href="sculpture.html">sculpure</a></li>
