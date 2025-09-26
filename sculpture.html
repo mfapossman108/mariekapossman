@@ -8,7 +8,6 @@
       text-align: left;
       margin: 0;
       padding: 20px;
-      font-family: sans-serif;
     }
 
     a {
@@ -28,11 +27,11 @@
       line-height: 1.3em;
     }
 
-    /* Responsive image sizing */
+    /* Larger, responsive images */
     img {
       display: block;
-      width: auto;
-      max-width: 300px; /* smaller maximum width */
+      max-width: 600px; /* makes them bigger */
+      width: 100%;      /* scales to screen size */
       height: auto;
       margin-bottom: 10px;
     }
@@ -40,7 +39,7 @@
     /* For multiple images in one row */
     .image-row img {
       display: inline-block;
-      max-width: 200px; /* smaller row images */
+      max-width: 300px; /* bigger than before */
       margin-right: 10px;
       height: auto;
     }
